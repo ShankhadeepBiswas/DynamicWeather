@@ -79,7 +79,7 @@
             from{
                 transform: rotate(0deg);
             }
-            from{
+            to{
                 transform: rortate(360deg);
             }
         }
@@ -95,13 +95,36 @@
             text-align: center;
             font-weight: 800;
             font-size: 3rem;
-            font-size: 400;
+            font-size: 600;
         }
         .fa-street-view{
             animation: rotates 3s linear infinite alternate;
         }
-        
-
+        @keyframes rotates{
+            from{
+                transform: translateX(-0.5rem);
+            }
+            to{
+                transform: translateX(0.5rem);
+            }
+        }
+        #date{
+            text-align: center;
+            margin-top: 0.5rem;
+            color: #57606f;
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        .temp{
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 3rem;
+        }
+        .tempmin_max{
+            text-align: center;
+            margin-top: ;
+        }
 
 
     </style>
