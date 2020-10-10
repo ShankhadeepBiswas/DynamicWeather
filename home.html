@@ -194,20 +194,32 @@
     </div>
 
     <script>
-        const curDate = document.getAnimations("date")
+        const curDate = document.getElementById("date")
         let weathercon = document.getElementById('weathercon')
 
         const tempStatus = 'Clouds'
-
         const getCurrentDay = ()=>{
-            var weekday = ["Sunday","Monday","Tuesday","Thursday","Friday","Saturday"];
-            var months =["January","February","March","April","May","June","July","August","September","October","November","December"];
-            var now = new Date();
-            var month = now.getMonth()
-            var day = now.getDate();
-
-
+            var weekday = ["Sun","Mon","Tue","Thurs","Fri","Sat"];
+            var day = weekday[now.getDay()]
+            return `${day}`
         }
+
+        const getCurrentTime = ()=>{
+            var months =["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+            var month = months[now.getMonth()]
+            var date = now.getDate();
+            var hours = now.getHours()
+            var mins = now.getMinutes()
+            let periods= "AM"
+            if(hours>11){
+                periods = "PM"
+                if(hours>12) hours-=12;
+            }
+            if(mins<10) mins ="0"+mins;
+            return `${month} ${date} | ${hours}:${mins}${periods}`
+        }
+        var now = new Date();
+        curDate.innerHTML= getCurrentDay()+'/'+getCurrentTime()
     </script>
 </body>
 </html>
