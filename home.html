@@ -29,8 +29,8 @@
             background: #eee;
         }
         .box{
-            width: 20vw;
-            height: 60vh;
+            width: 55vh;
+            height: 75vh;
             border-radius: 0.5rem;
             box-shadow: 0 0.2rem 3rem rgb(0,0,0,0.2);
             background: #a5bbdd;
@@ -41,7 +41,7 @@
             min-height: 35rem;
         }
         .wave{
-            opacity: 0.3;
+            opacity: 0.1;
             position: absolute;
             top: 120%;
             left: 50%;
@@ -80,7 +80,7 @@
                 transform: rotate(0deg);
             }
             to{
-                transform: rortate(360deg);
+                transform: rotate(360deg);
             }
         }
         info{
@@ -111,7 +111,7 @@
         #date{
             text-align: center;
             margin-top: 0.5rem;
-            color: #57606f;
+            color: #27282b;
             font-size: 1.2rem;
             font-weight: 300;
             text-transform: uppercase;
@@ -126,7 +126,7 @@
             margin-top: 0.3rem;
             font-weight: 300;
             font-size: 1.2rem;
-            color: #57606f;
+            color: #111111;
         }
         #weathercon{
             height: 55%;
@@ -173,7 +173,7 @@
         body >span {
             width: 100vw;
             text-align: center;
-            color: grey;
+            color: black ;
         }
     </style>
 </head>
@@ -201,11 +201,11 @@
         if (tempStatus == "Sunny")
             weathercon.innerHTML="<i class='fas fa-sun' style='color: #eccc68;'></i>"
         else if (tempStatus == "Clouds")
-            weathercon.innerHTML="<i class='fas fa-cloud' style='color: #f1f2f6;'></i>"
+            weathercon.innerHTML="<i class='fas fa-cloud' style='color: rgb(216, 216, 216);'></i>"
         else if (tempStatus == "Rainy")
             weathercon.innerHTML="<i class='fas fa-cloud-rain' style='color: #a4b0be;'></i>"
         else 
-            weathercon.innerHTML="<i class='fas fa-cloud' style='color: #44c3de;'></i>"
+            weathercon.innerHTML="<i class='fas fa-cloud' style='color: white;'></i>"
             
         const getCurrentDay = ()=>{
             var weekday = ["Sun","Mon","Tue","Thurs","Fri","Sat"];
